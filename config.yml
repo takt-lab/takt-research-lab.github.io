@@ -1,88 +1,28 @@
-baseURL: "https://takt-lab.github.io/takt-research-lab.github.io/"
+baseURL: "https://taktlab.io/"
 title: "Takt Research Lab"
 theme: PaperMod
 
-enableInlineShortcodes: true
-enableRobotsTXT: true
-pagination:
-  pagerSize: 20
-
-taxonomies:
-    tag: tags
-
-menu:
-    main:
-        - name: Books
-          url: books/
-          weight: 5
-        - name: Papers
-          url: papers/
-          weight: 2
-        - name: Courses
-          url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4
-        - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - JSON
 
 params:
-    description: "Research and technical documentation."
-    author: "Takt Research Lab"
-
-    # googleAnalyticsID: G-XXXXX
-    DateFormat: November 2026
-    defaultTheme: light
-    hideFooter: false
-    disableThemeToggle: true
-    ShowShareButtons: false
-    ShowReadingTime: false
-    disableSpecial1stPost: true
-    disableAnchoredHeadings: true
-    ShowPostNavLinks: false
-    ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
-    ShowAllPagesInArchive: false
-    MainSections: [books, courses, papers, data]
-    ShowToc: false
-    disableScrollToTop: true
-    TocOpen: true
-    ShowWordCount: false
-    UseHugoToc: true
-    comments: false
-    math: true
-    profileMode:
-          enabled: true
-          title: "Takt Research Lab"
-          subtitle: "Independent systems architecture and research."
-          imageUrl: "" # Leave empty or point to a file in static/
-          imageWidth: 160
-          imageHeight: 160
-          buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
-    assets:
-        disableScrollBarStyle: true
-    cover:
-        hiddenInList: false
-        hiddenInSingle: true
-
-markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        guessSyntax: true
-        style: autumn
-    tableOfContents:
-        endLevel: 2
-        ordered: false
-        startLevel: 2
+  description: "Research and technical documentation."
+  author: "Takt Research Lab"
+  assets:
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
+  profileMode:
+    enabled: true
+    title: "Takt Research Lab"
+    subtitle: "Independent systems architecture and research."
+    imageUrl: "logo.svg"
+    imageTitle: "Takt Research Lab Logo"
+    imageWidth: 160
+    imageHeight: 160
