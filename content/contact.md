@@ -8,4 +8,4 @@ ShowWordCount: false
 ShowShareButtons: false
 ---
 
-For research inquiries, technical consulting, or architecture discussions on automotive Over-The-Air (OTA) pipelines, hardware offloading, functional safety, and zonal networks, contact [inquiries@taktlab.io](mailto:inquiries@taktlab.io).
+For research inquiries, technical consulting, or architecture discussions on automotive Over-The-Air (OTA) pipelines, hardware offloading, functional safety, cybersecurity, and zonal networks, contact [inquiries@taktlab.io](mailto:inquiries@taktlab.io).
