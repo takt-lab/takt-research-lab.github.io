@@ -27,3 +27,10 @@
   color: #334155;
   font-weight: 600;
 }
+
+/* Subtle circular badge rim in dark mode */
+.dark .profile_inner img,
+.dark .profile_inner svg {
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(250, 248, 242, 0.22);
+}
