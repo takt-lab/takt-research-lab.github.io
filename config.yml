@@ -1,6 +1,18 @@
-baseURL: "https://taktlab.io/"
+#baseURL: "https://taktlab.io/"
+baseURL: "https://takt-lab.github.io/takt-research-lab.github.io/"
 title: "Takt Research Lab"
 theme: PaperMod
+
+menu:
+  main:
+    - identifier: articles
+      name: Articles
+      url: /articles/
+      weight: 20
+    - identifier: contact
+      name: Contact Us
+      url: /contact/
+      weight: 20
 
 outputs:
   home:
@@ -14,6 +26,7 @@ outputs:
 params:
   description: "Research and technical documentation."
   author: "Takt Research Lab"
+  hideSummary: true
   assets:
     favicon: "favicon.svg"
     favicon16x16: "favicon.svg"

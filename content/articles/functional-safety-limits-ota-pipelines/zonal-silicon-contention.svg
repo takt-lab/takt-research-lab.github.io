@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1120 760"
+   width="1120"
+   height="760"
+   font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif"
+   version="1.1"
+   id="svg72"
+   sodipodi:docname="part1-ota-contention.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview72"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.175"
+     inkscape:cx="559.57447"
+     inkscape:cy="380"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg72" />
+  <defs
+     id="defs5">
+    <!-- Subtle Grid Pattern for Technical Engineering Feel -->
+    <pattern
+       id="grid"
+       width="20"
+       height="20"
+       patternUnits="userSpaceOnUse">
+      <path
+         d="M 20 0 L 0 0 0 20"
+         fill="none"
+         stroke="#CBD5E1"
+         stroke-width="0.8"
+         id="path1" />
+    </pattern>
+    <!-- Arrow Markers -->
+    <marker
+       id="arrow-slate"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 1.5 L 9 5 L 0 8.5 z"
+         fill="#475569"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-blue"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 1.5 L 9 5 L 0 8.5 z"
+         fill="#0284C7"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrow-amber"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 1.5 L 9 5 L 0 8.5 z"
+         fill="#D97706"
+         id="path4" />
+    </marker>
+    <marker
+       id="arrow-red"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 1.5 L 9 5 L 0 8.5 z"
+         fill="#DC2626"
+         id="path5" />
+    </marker>
+  </defs>
+  <!-- Canvas Background: Light Grey -->
+  <rect
+     width="1120"
+     height="760"
+     fill="#E2E8F0"
+     id="rect5" />
+  <rect
+     width="1120"
+     height="760"
+     fill="url(#grid)"
+     id="rect6" />
+  <!-- Header -->
+  <text
+     x="40"
+     y="42"
+     font-size="20"
+     font-weight="700"
+     fill="#0F172A"
+     letter-spacing="-0.3"
+     id="text6">Software-Centric OTA Pipeline vs. Zonal Silicon Contention</text>
+  <text
+     x="40"
+     y="64"
+     font-size="13"
+     fill="#334155"
+     id="text7">Why park-only ASIL-B staging architectures violate ISO 26262 Freedom from Interference during active drive cycles</text>
+  <line
+     x1="40"
+     y1="78"
+     x2="1080"
+     y2="78"
+     stroke="#94A3B8"
+     stroke-width="1.2"
+     id="line7" />
+  <!-- ===================================================================== -->
+  <!-- TIER 1: NOMINAL CLOUD-TO-VEHICLE PIPELINE                             -->
+  <!-- ===================================================================== -->
+  <rect
+     x="40"
+     y="96"
+     width="1040"
+     height="162"
+     rx="8"
+     fill="#FFFFFF"
+     stroke="#94A3B8"
+     stroke-width="1.5"
+     id="rect7" />
+  <!-- Tier 1 Badge -->
+  <rect
+     x="56"
+     y="110"
+     width="235"
+     height="24"
+     rx="4"
+     fill="#F1F5F9"
+     stroke="#CBD5E1"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="66"
+     y="126"
+     font-size="11"
+     font-weight="700"
+     fill="#334155"
+     letter-spacing="0.5"
+     id="text8">1. NOMINAL END-TO-END DATA FLOW</text>
+  <rect
+     x="855"
+     y="110"
+     width="208"
+     height="24"
+     rx="4"
+     fill="#EFF6FF"
+     stroke="#BFDBFE"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="866"
+     y="126"
+     font-size="11"
+     font-weight="600"
+     fill="#1D4ED8"
+     id="text9">Payload: ~200 MB | State: Driving</text>
+  <!-- Pipeline Nodes -->
+  <!-- Node 1: Cloud -->
+  <rect
+     x="64"
+     y="152"
+     width="175"
+     height="82"
+     rx="6"
+     fill="#F8FAFC"
+     stroke="#64748B"
+     stroke-width="1.5"
+     id="rect10" />
+  <text
+     x="151"
+     y="182"
+     font-size="13"
+     font-weight="700"
+     fill="#0F172A"
+     text-anchor="middle"
+     id="text10">OTA Cloud Backend</text>
+  <text
+     x="151"
+     y="201"
+     font-size="11"
+     fill="#475569"
+     text-anchor="middle"
+     id="text11">Signed Delta / Full Image</text>
+  <text
+     x="151"
+     y="218"
+     font-size="10.5"
+     font-family="monospace"
+     fill="#64748B"
+     text-anchor="middle"
+     id="text12">X.509 + ECDSA Manifest</text>
+  <!-- Arrow 1 -->
+  <line
+     x1="239"
+     y1="193"
+     x2="328"
+     y2="193"
+     stroke="#475569"
+     stroke-width="1.8"
+     marker-end="url(#arrow-slate)"
+     id="line12" />
+  <text
+     x="283"
+     y="184"
+     font-size="10.5"
+     font-weight="600"
+     fill="#334155"
+     text-anchor="middle"
+     id="text13">5G / TLS 1.3</text>
+  <!-- Node 2: TCU / Central Gateway -->
+  <rect
+     x="334"
+     y="152"
+     width="185"
+     height="82"
+     rx="6"
+     fill="#F8FAFC"
+     stroke="#64748B"
+     stroke-width="1.5"
+     id="rect13" />
+  <text
+     x="426"
+     y="182"
+     font-size="13"
+     font-weight="700"
+     fill="#0F172A"
+     text-anchor="middle"
+     id="text14">TCU / Central Gateway</text>
+  <text
+     x="426"
+     y="201"
+     font-size="11"
+     fill="#475569"
+     text-anchor="middle"
+     id="text15">Package Ingestion  Routing</text>
+  <text
+     x="426"
+     y="218"
+     font-size="10.5"
+     font-family="monospace"
+     fill="#64748B"
+     text-anchor="middle"
+     id="text16">DoIP / UDS Client</text>
+  <!-- Arrow 2 -->
+  <line
+     x1="519"
+     y1="193"
+     x2="618"
+     y2="193"
+     stroke="#475569"
+     stroke-width="1.8"
+     marker-end="url(#arrow-slate)"
+     id="line16" />
+  <text
+     x="568"
+     y="184"
+     font-size="10.5"
+     font-weight="600"
+     fill="#334155"
+     text-anchor="middle"
+     id="text17">100/1000BASE-T1</text>
+  <text
+     x="568"
+     y="207"
+     font-size="10"
+     fill="#64748B"
+     text-anchor="middle"
+     id="text18">Ethernet Backbone</text>
+  <!-- Node 3: Zonal Controller (Highlighted) -->
+  <rect
+     x="624"
+     y="148"
+     width="205"
+     height="90"
+     rx="6"
+     fill="#FEF2F2"
+     stroke="#DC2626"
+     stroke-width="2"
+     id="rect18" />
+  <text
+     x="726"
+     y="177"
+     font-size="13"
+     font-weight="700"
+     fill="#991B1B"
+     text-anchor="middle"
+     id="text19">Zonal Controller MCU</text>
+  <text
+     x="726"
+     y="196"
+     font-size="11"
+     fill="#7F1D1D"
+     text-anchor="middle"
+     id="text20">Background Staging  Flashing</text>
+  <rect
+     x="652"
+     y="206"
+     width="148"
+     height="20"
+     rx="3"
+     fill="#DC2626"
+     id="rect20" />
+  <text
+     x="726"
+     y="220"
+     font-size="10"
+     font-weight="700"
+     fill="#FFFFFF"
+     text-anchor="middle"
+     id="text21">SILICON CONTENTION ZONE</text>
+  <!-- Arrow 3 -->
+  <line
+     x1="829"
+     y1="193"
+     x2="914"
+     y2="193"
+     stroke="#475569"
+     stroke-width="1.8"
+     marker-end="url(#arrow-slate)"
+     id="line21" />
+  <text
+     x="871"
+     y="184"
+     font-size="10.5"
+     font-weight="600"
+     fill="#334155"
+     text-anchor="middle"
+     id="text22">CAN FD / Eth</text>
+  <text
+     x="871"
+     y="207"
+     font-size="10"
+     fill="#64748B"
+     text-anchor="middle"
+     id="text23">ISO-TP / UDS</text>
+  <!-- Node 4: Edge ECU -->
+  <rect
+     x="920"
+     y="152"
+     width="142"
+     height="82"
+     rx="6"
+     fill="#F8FAFC"
+     stroke="#64748B"
+     stroke-width="1.5"
+     id="rect23" />
+  <text
+     x="991"
+     y="182"
+     font-size="13"
+     font-weight="700"
+     fill="#0F172A"
+     text-anchor="middle"
+     id="text24">Edge Actuator ECU</text>
+  <text
+     x="991"
+     y="201"
+     font-size="11"
+     fill="#475569"
+     text-anchor="middle"
+     id="text25">Downstream Target</text>
+  <text
+     x="991"
+     y="218"
+     font-size="10.5"
+     font-family="monospace"
+     fill="#64748B"
+     text-anchor="middle"
+     id="text26">Dual-Bank Swap</text>
+  <!-- Neutralized Zoom Connector Lines (Slate Grey instead of Red) -->
+  <path
+     d="M 624 238 L 40 282"
+     stroke="#64748B"
+     stroke-width="1.2"
+     stroke-dasharray="5,4"
+     id="path26" />
+  <path
+     d="M 829 238 L 1080 282"
+     stroke="#64748B"
+     stroke-width="1.2"
+     stroke-dasharray="5,4"
+     id="path27" />
+  <!-- ===================================================================== -->
+  <!-- TIER 2: INSIDE THE ZONAL CONTROLLER SILICON                           -->
+  <!-- ===================================================================== -->
+  <rect
+     x="40"
+     y="282"
+     width="1040"
+     height="454"
+     rx="8"
+     fill="#FFFFFF"
+     stroke="#64748B"
+     stroke-width="1.8"
+     id="rect27" />
+  <!-- Tier 2 Header Bar -->
+  <rect
+     x="56"
+     y="296"
+     width="380"
+     height="24"
+     rx="4"
+     fill="#FEF2F2"
+     stroke="#FECACA"
+     stroke-width="1"
+     id="rect28" />
+  <text
+     x="66"
+     y="312"
+     font-size="11"
+     font-weight="700"
+     fill="#991B1B"
+     letter-spacing="0.5"
+     id="text28">2. ZONAL CONTROLLER SILICON (SHARED EXECUTION DOMAIN)</text>
+  <text
+     x="1064"
+     y="312"
+     font-size="11"
+     font-weight="600"
+     fill="#334155"
+     text-anchor="end"
+     id="text29">Software-Centric Architecture (No Hardware Isolation)</text>
+  <!-- LEFT COLUMN: COMPETING SOFTWARE WORKLOADS -->
+  <!-- Path A: OTA Stack (ASIL-B / QM) -->
+  <rect
+     x="60"
+     y="338"
+     width="330"
+     height="172"
+     rx="6"
+     fill="#EFF6FF"
+     stroke="#3B82F6"
+     stroke-width="1.5"
+     id="rect29" />
+  <rect
+     x="74"
+     y="350"
+     width="180"
+     height="20"
+     rx="3"
+     fill="#1D4ED8"
+     id="rect30" />
+  <text
+     x="82"
+     y="364"
+     font-size="10"
+     font-weight="700"
+     fill="#FFFFFF"
+     id="text30">OTA STAGING STACK (QM / ASIL-B)</text>
+  <rect
+     x="74"
+     y="380"
+     width="302"
+     height="32"
+     rx="4"
+     fill="#FFFFFF"
+     stroke="#93C5FD"
+     stroke-width="1"
+     id="rect31" />
+  <text
+     x="84"
+     y="400"
+     font-size="11.5"
+     font-weight="600"
+     fill="#1E3A8A"
+     id="text31">1. ETH / CAN RX Ring Buffer Copies</text>
+  <rect
+     x="74"
+     y="420"
+     width="302"
+     height="32"
+     rx="4"
+     fill="#FFFFFF"
+     stroke="#93C5FD"
+     stroke-width="1"
+     id="rect32" />
+  <text
+     x="84"
+     y="440"
+     font-size="11.5"
+     font-weight="600"
+     fill="#1E3A8A"
+     id="text32">2. UDS (0x27/0x29/0x36)  ECDSA Parse</text>
+  <rect
+     x="74"
+     y="460"
+     width="302"
+     height="36"
+     rx="4"
+     fill="#FFFFFF"
+     stroke="#93C5FD"
+     stroke-width="1"
+     id="rect33" />
+  <text
+     x="84"
+     y="476"
+     font-size="11.5"
+     font-weight="600"
+     fill="#1E3A8A"
+     id="text33">3. PFlash Sector Erase  Bank Swap</text>
+  <text
+     x="84"
+     y="490"
+     font-size="10"
+     fill="#3B82F6"
+     id="text34">Monolithic software loop + RAM key exposure</text>
+  <!-- Path B: Real-Time Control (ASIL-D) -->
+  <rect
+     x="60"
+     y="532"
+     width="330"
+     height="182"
+     rx="6"
+     fill="#FFFBEB"
+     stroke="#D97706"
+     stroke-width="1.5"
+     id="rect34" />
+  <rect
+     x="74"
+     y="544"
+     width="215"
+     height="20"
+     rx="3"
+     fill="#B45309"
+     id="rect35" />
+  <text
+     x="82"
+     y="558"
+     font-size="10"
+     font-weight="700"
+     fill="#FFFFFF"
+     id="text35">ACTIVE VEHICLE CONTROL (ASIL-D)</text>
+  <rect
+     x="74"
+     y="574"
+     width="302"
+     height="34"
+     rx="4"
+     fill="#FFFFFF"
+     stroke="#FCD34D"
+     stroke-width="1"
+     id="rect36" />
+  <text
+     x="84"
+     y="595"
+     font-size="11.5"
+     font-weight="600"
+     fill="#78350F"
+     id="text36">1. Motor / Chassis Control Loops (100 µs)</text>
+  <rect
+     x="74"
+     y="618"
+     width="302"
+     height="34"
+     rx="4"
+     fill="#FFFFFF"
+     stroke="#FCD34D"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="84"
+     y="639"
+     font-size="11.5"
+     font-weight="600"
+     fill="#78350F"
+     id="text37">2. ISO 14229 Diagnostic Timers (P2 / P2*)</text>
+  <rect
+     x="74"
+     y="662"
+     width="302"
+     height="38"
+     rx="4"
+     fill="#FFFFFF"
+     stroke="#FCD34D"
+     stroke-width="1"
+     id="rect38" />
+  <text
+     x="84"
+     y="679"
+     font-size="11.5"
+     font-weight="600"
+     fill="#78350F"
+     id="text38">3. Safety Supervision  Watchdog Feed</text>
+  <text
+     x="84"
+     y="693"
+     font-size="10"
+     fill="#B45309"
+     id="text39">Deterministic execution required</text>
+  <!-- CENTER COLUMN: SHARED HARDWARE RESOURCES (THE 3 BOTTLENECKS) -->
+  <!-- Resource 1: Application CPU Core -->
+  <rect
+     x="465"
+     y="338"
+     width="260"
+     height="114"
+     rx="6"
+     fill="#F8FAFC"
+     stroke="#475569"
+     stroke-width="1.5"
+     id="rect39" />
+  <text
+     x="595"
+     y="360"
+     font-size="12.5"
+     font-weight="700"
+     fill="#0F172A"
+     text-anchor="middle"
+     id="text40">Shared Application CPU Core(s)</text>
+  <line
+     x1="480"
+     y1="368"
+     x2="710"
+     y2="368"
+     stroke="#CBD5E1"
+     stroke-width="1"
+     id="line40" />
+  <text
+     x="595"
+     y="388"
+     font-size="11"
+     fill="#334155"
+     text-anchor="middle"
+     id="text41">Crypto parsing  buffer copies</text>
+  <text
+     x="595"
+     y="404"
+     font-size="11"
+     fill="#334155"
+     text-anchor="middle"
+     id="text42">compete directly with ASIL-D ISRs</text>
+  <rect
+     x="505"
+     y="418"
+     width="180"
+     height="22"
+     rx="11"
+     fill="#DC2626"
+     id="rect42" />
+  <text
+     x="595"
+     y="433"
+     font-size="10.5"
+     font-weight="700"
+     fill="#FFFFFF"
+     text-anchor="middle"
+     id="text43">COLLISION 1: CPU STARVATION</text>
+  <!-- Resource 2: System Crossbar / Bus -->
+  <rect
+     x="465"
+     y="470"
+     width="260"
+     height="114"
+     rx="6"
+     fill="#F8FAFC"
+     stroke="#475569"
+     stroke-width="1.5"
+     id="rect43" />
+  <text
+     x="595"
+     y="492"
+     font-size="12.5"
+     font-weight="700"
+     fill="#0F172A"
+     text-anchor="middle"
+     id="text44">System Crossbar  SRAM Bus</text>
+  <line
+     x1="480"
+     y1="500"
+     x2="710"
+     y2="500"
+     stroke="#CBD5E1"
+     stroke-width="1"
+     id="line44" />
+  <text
+     x="595"
+     y="520"
+     font-size="11"
+     fill="#334155"
+     text-anchor="middle"
+     id="text45">Sustained multi-MB DMA/CPU bursts</text>
+  <text
+     x="595"
+     y="536"
+     font-size="11"
+     fill="#334155"
+     text-anchor="middle"
+     id="text46">saturate bus arbitration  expose RAM</text>
+  <rect
+     x="500"
+     y="550"
+     width="190"
+     height="22"
+     rx="11"
+     fill="#DC2626"
+     id="rect46" />
+  <text
+     x="595"
+     y="565"
+     font-size="10.5"
+     font-weight="700"
+     fill="#FFFFFF"
+     text-anchor="middle"
+     id="text47">COLLISION 2: BUS  JITTER</text>
+  <!-- Resource 3: Flash Controller & NVM -->
+  <rect
+     x="465"
+     y="602"
+     width="260"
+     height="112"
+     rx="6"
+     fill="#F8FAFC"
+     stroke="#475569"
+     stroke-width="1.5"
+     id="rect47" />
+  <text
+     x="595"
+     y="624"
+     font-size="12.5"
+     font-weight="700"
+     fill="#0F172A"
+     text-anchor="middle"
+     id="text48">PFlash / DFlash Memory Controller</text>
+  <line
+     x1="480"
+     y1="632"
+     x2="710"
+     y2="632"
+     stroke="#CBD5E1"
+     stroke-width="1"
+     id="line48" />
+  <text
+     x="595"
+     y="652"
+     font-size="11"
+     fill="#334155"
+     text-anchor="middle"
+     id="text49">Sector erase stalls instruction fetch;</text>
+  <text
+     x="595"
+     y="668"
+     font-size="11"
+     fill="#334155"
+     text-anchor="middle"
+     id="text50">ECC / brownout faults crash core</text>
+  <rect
+     x="495"
+     y="682"
+     width="200"
+     height="22"
+     rx="11"
+     fill="#DC2626"
+     id="rect50" />
+  <text
+     x="595"
+     y="697"
+     font-size="10.5"
+     font-weight="700"
+     fill="#FFFFFF"
+     text-anchor="middle"
+     id="text51">COLLISION 3: FLASH / ECC STALL</text>
+  <!-- CONTENTION ARROWS (Left -> Center) -->
+  <!-- Blue OTA arrows -->
+  <path
+     d="M 376 436 L 458 395"
+     stroke="#0284C7"
+     stroke-width="1.8"
+     marker-end="url(#arrow-blue)"
+     id="path51" />
+  <path
+     d="M 376 396 L 458 518"
+     stroke="#0284C7"
+     stroke-width="1.8"
+     marker-end="url(#arrow-blue)"
+     id="path52" />
+  <path
+     d="M 376 478 L 458 648"
+     stroke="#0284C7"
+     stroke-width="1.8"
+     marker-end="url(#arrow-blue)"
+     id="path53" />
+  <!-- Amber ASIL-D arrows -->
+  <path
+     d="M 376 591 L 458 415"
+     stroke="#D97706"
+     stroke-width="1.8"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-amber)"
+     id="path54" />
+  <path
+     d="M 376 635 L 458 538"
+     stroke="#D97706"
+     stroke-width="1.8"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-amber)"
+     id="path55" />
+  <path
+     d="M 376 681 L 458 668"
+     stroke="#D97706"
+     stroke-width="1.8"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-amber)"
+     id="path56" />
+  <!-- RIGHT COLUMN: ISO 26262 FFI FAILURE MODES -->
+  <!-- Failure 1 -->
+  <rect
+     x="785"
+     y="338"
+     width="275"
+     height="114"
+     rx="6"
+     fill="#FEF2F2"
+     stroke="#FCA5A5"
+     stroke-width="1.5"
+     id="rect56" />
+  <text
+     x="800"
+     y="360"
+     font-size="12"
+     font-weight="700"
+     fill="#991B1B"
+     id="text56">Control-Loop  Security Failures</text>
+  <text
+     x="800"
+     y="381"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text57">• ASIL-D task deadline misses</text>
+  <text
+     x="800"
+     y="399"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text58">• Watchdog timeout resets</text>
+  <text
+     x="800"
+     y="417"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text59">• UDS 0x27/0x29 keys exposed in RAM</text>
+  <text
+     x="800"
+     y="435"
+     font-size="10.5"
+     font-weight="600"
+     fill="#DC2626"
+     id="text60">→ Violates Temporal  Security Isolation</text>
+  <!-- Failure 2 -->
+  <rect
+     x="785"
+     y="470"
+     width="275"
+     height="114"
+     rx="6"
+     fill="#FEF2F2"
+     stroke="#FCA5A5"
+     stroke-width="1.5"
+     id="rect60" />
+  <text
+     x="800"
+     y="492"
+     font-size="12"
+     font-weight="700"
+     fill="#991B1B"
+     id="text61">ISO 14229 Transport Breakdown</text>
+  <text
+     x="800"
+     y="513"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text62">• Missed P2 / P2* response windows</text>
+  <text
+     x="800"
+     y="531"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text63">• Tester drops diagnostic session</text>
+  <text
+     x="800"
+     y="549"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text64">• Repeated ISO-TP retransmissions</text>
+  <text
+     x="800"
+     y="567"
+     font-size="10.5"
+     font-weight="600"
+     fill="#DC2626"
+     id="text65">→ Violates Deterministic Bus Timing</text>
+  <!-- Failure 3 -->
+  <rect
+     x="785"
+     y="602"
+     width="275"
+     height="112"
+     rx="6"
+     fill="#FEF2F2"
+     stroke="#FCA5A5"
+     stroke-width="1.5"
+     id="rect65" />
+  <text
+     x="800"
+     y="624"
+     font-size="12"
+     font-weight="700"
+     fill="#991B1B"
+     id="text66">Unrecoverable Core / Flash Faults</text>
+  <text
+     x="800"
+     y="645"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text67">• Non-atomic bank swap corruption</text>
+  <text
+     x="800"
+     y="663"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text68">• Unhandled Flash/RAM ECC traps</text>
+  <text
+     x="800"
+     y="681"
+     font-size="11"
+     fill="#7F1D1D"
+     id="text69">• ECU left unbootable post-brownout</text>
+  <text
+     x="800"
+     y="699"
+     font-size="10.5"
+     font-weight="600"
+     fill="#DC2626"
+     id="text70">→ Violates Spatial  Execution Isolation</text>
+  <!-- FAILURE ARROWS (Center -> Right) -->
+  <line
+     x1="725"
+     y1="395"
+     x2="778"
+     y2="395"
+     stroke="#DC2626"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line70" />
+  <line
+     x1="725"
+     y1="527"
+     x2="778"
+     y2="527"
+     stroke="#DC2626"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line71" />
+  <line
+     x1="725"
+     y1="658"
+     x2="778"
+     y2="658"
+     stroke="#DC2626"
+     stroke-width="2"
+     marker-end="url(#arrow-red)"
+     id="line72" />
+</svg>

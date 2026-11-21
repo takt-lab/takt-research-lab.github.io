@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">Functional Safety Limits of Software-Centric OTA Pipelines</title>
+  <desc>High-level diagram showing software OTA processing contending with ASIL-B real-time tasks on a shared CPU.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAF8F2; }
+      .box-ota { fill: #F2F5F8; stroke: #2B5B84; stroke-width: 2; rx: 10; }
+      .box-cpu { fill: #FFFFFF; stroke: #8E897E; stroke-width: 2; rx: 12; }
+      .box-safety { fill: #EEF4F0; stroke: #2E6F40; stroke-width: 2; rx: 10; }
+      .tag-warn { fill: #FBEAE4; stroke: #C85A32; stroke-width: 1.75; rx: 8; }
+      .kicker { font: 700 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #5A5750; letter-spacing: 0.08em; }
+      .heading { font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #1D1D1B; }
+      .sub { font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #5A5750; }
+      .box-title { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #1D1D1B; }
+      .box-sub { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #4A4842; }
+      .warn-txt { font: 600 13.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #B03A1E; }
+      .line-ota { stroke: #2B5B84; stroke-width: 2.5; fill: none; }
+      .line-safety { stroke: #2E6F40; stroke-width: 2.5; fill: none; }
+      .line-warn { stroke: #C85A32; stroke-width: 2.2; stroke-dasharray: 6 4; fill: none; }
+    </style>
+
+    <marker id="arr-ota" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#2B5B84" />
+    </marker>
+    <marker id="arr-safety" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#2E6F40" />
+    </marker>
+    <marker id="arr-warn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#C85A32" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="600" />
+
+  <!-- Title -->
+  <text x="72" y="72" class="kicker">TAKT RESEARCH LAB</text>
+  <text x="72" y="106" class="heading">Functional Safety Limits of Software-Centric OTA Pipelines</text>
+  <text x="72" y="134" class="sub">Shared host execution creates timing contention between OTA updates and ASIL-B safety functions</text>
+
+  <!-- Left: Software OTA -->
+  <rect class="box-ota" x="72" y="210" width="290" height="230" />
+  <text x="98" y="255" class="box-title">Software OTA Pipeline</text>
+  <text x="98" y="285" class="box-sub">Packet ingest, protocol</text>
+  <text x="98" y="307" class="box-sub">handling &amp; flash writes</text>
+  <text x="98" y="355" class="box-sub">Burst traffic &amp; interrupts</text>
+
+  <!-- Center: Shared Host CPU -->
+  <rect class="box-cpu" x="455" y="190" width="290" height="270" />
+  <text x="481" y="235" class="box-title">Shared Host CPU</text>
+  <text x="481" y="265" class="box-sub">Single compute pool &amp;</text>
+  <text x="481" y="287" class="box-sub">shared memory/bus access</text>
+
+  <rect class="tag-warn" x="477" y="330" width="246" height="96" />
+  <text x="495" y="362" class="warn-txt">Timing Contention</text>
+  <text x="495" y="386" class="box-sub">• Interrupt load spikes</text>
+  <text x="495" y="408" class="box-sub">• Real-time deadline risk</text>
+
+  <!-- Right: ASIL-B Safety Tasks -->
+  <rect class="box-safety" x="838" y="210" width="290" height="230" />
+  <text x="864" y="255" class="box-title">ASIL-B Safety Tasks</text>
+  <text x="864" y="285" class="box-sub">Deterministic control &amp;</text>
+  <text x="864" y="307" class="box-sub">safety monitoring</text>
+  <text x="864" y="355" class="box-sub">Bounded latency required</text>
+
+  <!-- Arrows -->
+  <path class="line-ota" d="M 362 325 L 447 325" marker-end="url(#arr-ota)" />
+  <path class="line-safety" d="M 745 325 L 830 325" marker-end="url(#arr-safety)" />
+  <path class="line-warn" d="M 362 385 L 470 385" marker-end="url(#arr-warn)" />
+</svg>
