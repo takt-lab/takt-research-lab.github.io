@@ -1,5 +1,4 @@
-#baseURL: "https://taktlab.io/"
-baseURL: "https://takt-lab.github.io/takt-research-lab.github.io/"
+baseURL: "https://taktlab.io/"
 title: "Takt Research Lab"
 theme: PaperMod
 
