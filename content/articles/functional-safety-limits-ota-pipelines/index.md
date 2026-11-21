@@ -1,5 +1,20 @@
 ---
 title: "Functional Safety Limits of Software-Centric OTA Pipelines"
+keywords:
+  - "ISO 26262"
+  - "Over-the-air update"
+  - "Hardware offloading"
+  - "Unified Diagnostic Services"
+  - "Zonal architecture"
+about:
+  - "ISO 26262"
+  - "Over-the-air update"
+  - "Hardware offloading"
+  - "Zonal architecture"
+mentions:
+  - "Unified Diagnostic Services"
+  - "ISO 14229"
+  - "Freedom from Interference"
 date: 2026-11-20
 draft: false
 summary: "Why coupling high-throughput packet forwarding and flash programming onto an ASIL-B host core introduces interrupt starvation, WCET overruns, and Freedom From Interference bottlenecks."
