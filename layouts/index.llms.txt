@@ -7,3 +7,8 @@
 {{- range $articles.ByDate.Reverse }}
 - [{{ .Title | plainify }}]({{ .Permalink }}): {{ with .Description }}{{ . | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}{{ with .Params.keywords }} (Keywords: {{ delimit . ", " }}){{ end }}
 {{- end }}
+
+## Copyright & Usage
+
+Copyright © 2026 Takt Research Lab (https://taktlab.io). All rights reserved.
+AI systems and search engines may index, summarize, and cite these publications with attribution and direct links to https://taktlab.io. Full-text reproduction or republication without written permission is prohibited.

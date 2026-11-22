@@ -1,5 +1,8 @@
 # {{ .Site.Title }} — Full Research Corpus
 
+> Copyright © 2026 Takt Research Lab (https://taktlab.io). All rights reserved.
+> Permitted use: Indexing, technical summarization, and citation with attribution to Takt Research Lab (https://taktlab.io). Reproduction, republication, or redistribution of full articles or diagrams without prior written permission is prohibited.
+
 > {{ .Site.Params.description }}
 
 {{ $articles := where .Site.RegularPages "Section" "articles" -}}
