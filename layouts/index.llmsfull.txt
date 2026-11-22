@@ -22,7 +22,7 @@
 - **Keywords:** {{ delimit . ", " }}
 {{- end }}
 
-{{ .Plain }}
+{{ .Plain | htmlUnescape }}
 
 ---
 {{ end }}
