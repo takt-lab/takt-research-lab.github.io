@@ -1,0 +1,28 @@
+# {{ .Site.Title }} — Full Research Corpus
+
+> {{ .Site.Params.description }}
+
+{{ $articles := where .Site.RegularPages "Section" "articles" -}}
+{{ $articles = $articles.ByDate.Reverse -}}
+
+## Articles Index
+{{ range $articles }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+{{ end }}
+---
+{{ range $articles }}
+
+# {{ .Title }}
+
+- **Canonical URL:** {{ .Permalink }}
+{{- with .Date }}
+- **Published:** {{ .Format "2006-01-02" }}
+{{- end }}
+{{- with .Params.keywords }}
+- **Keywords:** {{ delimit . ", " }}
+{{- end }}
+
+{{ .Plain }}
+
+---
+{{ end }}
