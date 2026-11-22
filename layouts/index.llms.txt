@@ -1,0 +1,9 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description | default "Technical research notes on automotive functional safety, OTA pipelines, hardware offloading, and embedded systems." }}
+
+## Research Articles
+{{- $articles := where .Site.RegularPages "Section" "articles" -}}
+{{- range $articles.ByDate.Reverse }}
+- [{{ .Title | plainify }}]({{ .Permalink }}): {{ with .Description }}{{ . | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}{{ with .Params.keywords }} (Keywords: {{ delimit . ", " }}){{ end }}
+{{- end }}

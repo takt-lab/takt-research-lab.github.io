@@ -1,0 +1,50 @@
+baseURL = "https://taktlab.io/"
+title = "Takt Research Lab"
+theme = "PaperMod"
+
+[menu]
+main = [
+    { identifier = "articles", name = "Articles", url = "/articles/", weight = 20 },
+    { identifier = "contact", name = "Contact Us", url = "/contact/", weight = 20 },
+]
+
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+  [outputFormats.LLMS]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+
+[outputs]
+home = [
+    "HTML",
+    "RSS",
+    "JSON",
+    "LLMS"
+]
+page = [
+    "HTML",
+    "JSON",
+]
+
+[params]
+description = "Research on high-throughput Over-The-Air (OTA) pipelines, hardware offloading, functional safety (FuSa ISO 26262), cybersecurity, and zonal networks"
+author = "Takt Research Lab"
+hideSummary = true
+
+[params.assets]
+favicon = "favicon.svg"
+favicon16x16 = "favicon.svg"
+favicon32x32 = "favicon.svg"
+
+[params.profileMode]
+enabled = true
+title = "Takt Research Lab"
+subtitle = "Independent systems architecture and research."
+imageUrl = "logo.svg"
+imageTitle = "Takt Research Lab Logo"
+imageWidth = 160
+imageHeight = 160
