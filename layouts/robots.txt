@@ -1,0 +1,24 @@
+# Default crawlers
+User-agent: *
+Allow: /
+
+# AI search and retrieval crawlers (citation & live lookup)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}

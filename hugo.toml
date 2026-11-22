@@ -1,6 +1,7 @@
 baseURL = "https://taktlab.io/"
 title = "Takt Research Lab"
 theme = "PaperMod"
+enableRobotsTXT = true
 
 [menu]
 main = [
