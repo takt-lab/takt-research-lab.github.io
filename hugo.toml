@@ -59,4 +59,4 @@ imageHeight = 160
 
 [params.footer]
   disableThemePowered = true
-  text = 'Content under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (<a href="https://taktlab.io">taktlab.io</a>)'
+    text = 'All rights reserved (<a href="https://taktlab.io">taktlab.io</a>)'

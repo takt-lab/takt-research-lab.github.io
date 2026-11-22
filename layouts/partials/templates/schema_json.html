@@ -62,8 +62,22 @@
 {{- if .IsPage }}
 <script type="application/ld+json">
 {
+  {{- $year := now.Format "2006" -}}
+  {{- if not .Date.IsZero -}}
+    {{- $year = .Date.Format "2006" -}}
+  {{- end -}}
   "@context": "https://schema.org",
   "@type": "TechArticle",
+  {{- if eq .Section "articles" }}
+  "copyrightYear": {{ $year }},
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Takt Research Lab",
+    "url": "https://taktlab.io"
+  },
+  "copyrightNotice": "Copyright © {{ $year }} Takt Research Lab. All rights reserved.",
+  "isAccessibleForFree": true,
+  {{- end }}
   "headline": {{ .Title | plainify | jsonify | safeJS }},
   "name": "{{ .Title | plainify }}",
   "description": {{ with .Description }}{{ (. | plainify) | jsonify | safeJS }}{{ else }}{{ (.Summary | plainify) | jsonify | safeJS }}{{ end }},
