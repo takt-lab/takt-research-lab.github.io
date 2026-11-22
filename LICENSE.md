@@ -1,21 +1,18 @@
-MIT License
+# License
 
-Copyright (c) 2023–present Pascal Michaillat  
+All original written content and diagrams published by **Takt Research Lab** on [taktlab.io](https://taktlab.io) and in this repository—including technical whitepapers, engineering articles, and architecture notes—are licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**, unless noted otherwise.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- **License Summary & Legal Code:** [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Attribution
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+When sharing or adapting material from Takt Research Lab under CC BY 4.0, you must:
+
+- Give appropriate credit to **Takt Research Lab** and link to **[taktlab.io](https://taktlab.io)** (or the specific source article).
+- Indicate if changes were made.
+- Not imply that Takt Research Lab endorses you or your use of the material.
+
+## Scope & Exclusions
+
+- **Repository Code & Configuration:** Build scripts, configuration files, and code snippets in this repository are provided as-is for technical reference unless a separate code license is specified.
+- **Third-Party Components:** Theme files under `themes/PaperMod/` (including `themes/PaperMod/LICENSE`) and any third-party trademarks, standards references, or external assets remain under their respective owners' licenses and terms.
