@@ -69,8 +69,9 @@
                     width="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }}
-                    {{ site.Params.label.iconSVG | safeHTML }}
+                {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
+                <img src="{{ "logo.svg" | relURL }}" alt="{{ $label_text }} logo" class="nav-brand-logo" width="24" height="24" decoding="async">
                 {{- $label_text -}}
             </a>
             {{- end }}
