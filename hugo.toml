@@ -6,7 +6,7 @@ enableRobotsTXT = true
 [menu]
 main = [
     { identifier = "articles", name = "Articles", url = "/articles/", weight = 20 },
-    { identifier = "contact", name = "Contact Us", url = "/contact/", weight = 20 },
+    { identifier = "contact", name = "Contact", url = "/contact/", weight = 20 },
 ]
 
 [mediaTypes]
