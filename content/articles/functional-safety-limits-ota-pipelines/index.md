@@ -72,3 +72,16 @@ Instead of layering additional ASIL-D supervision logic onto software stacks, mo
 * **Isolate critical operations**—cryptographic verification, flash programming, and safety supervision—inside hardware-enforced security and safety domains where bus controls and memory protection prevent cross-domain interference.
 
 In **Part II**, we will examine how next-generation microcontrollers use hardware packet routing, hardware security modules, lockstep cores, and bus-level firewalls to enforce ASIL-D Freedom from Interference without certifying the entire stack to ASIL-D.
+
+---
+
+## References & Standards
+
+1. **ISO 26262-6:2018**, *Road vehicles — Functional safety — Part 6: Product development at the software level* (Section 7 & Annex D: Freedom from interference between software elements regarding timing, execution, and memory).
+2. **AUTOSAR Classic Platform Specification**, *Requirements on Operating System (SRS_Os)* and *Specification of Memory Protection* (MPU-based spatial isolation and timing protection budgets for mixed-ASIL partitions).
+3. **ISO 14229-1:2020**, *Road vehicles — Unified diagnostic services (UDS) — Part 1: Application layer* (Diagnostic session control, Service `0x27` Security Access, Service `0x29` Authentication, and `P2` / `P2*` server timing parameters).
+4. **ISO 21434:2021**, *Road vehicles — Cybersecurity engineering* (Cryptographic key lifecycle management, trust anchor isolation, and protection of diagnostic authentication assets).
+5. **EVITA / SHE Hardware Security Module Specifications**, *Secure Hardware Extension (SHE) Functional Specification* (Hardware-isolated key storage and cryptographic verification boundaries).
+6. **ISO 24089:2023**, *Road vehicles — Software update engineering* (Target ECU integrity verification, power-loss resilience, and rollback/recovery requirements during software updates).
+7. **ISO 15765-2:2016**, *Road vehicles — Diagnostic communication over Controller Area Network (DoCAN) — Part 2: Transport protocol and network layer services* (Segmented multi-frame transfer flow control, `BlockSize`, `STmin`, and `N_As` / `N_Bs` / `N_Cr` timing constraints).
+8. **ISO 13400-2:2019**, *Road vehicles — Diagnostic communication over Internet Protocol (DoIP) — Part 2: Transport protocol and network layer services* (High-throughput Ethernet diagnostic payload streaming).
